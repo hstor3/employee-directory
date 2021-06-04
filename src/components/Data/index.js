@@ -13,6 +13,8 @@ class Data extends Component {
         {name: 'image', width: '10px'},
         {name: 'name', width: '20px'},
         {name: 'email', width: '20px'},
+        {name: 'birthday', width: '20px'},
+        {name: 'phone', width: '20px'}
         // {birthday phone}
     ]
 
