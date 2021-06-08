@@ -1,6 +1,7 @@
 import React from 'react';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Data from '../Data';
+import './index.css';
 
 function Wrapper() {
     return (

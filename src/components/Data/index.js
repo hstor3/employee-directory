@@ -21,6 +21,7 @@ class Data extends Component {
   //     // {birthday phone}
   // ]
 
+//   sorts users first name alphabetically
   handleSort() {
     if (!this.state.sort) {
       return;
@@ -37,26 +38,26 @@ class Data extends Component {
         if (x > y) {
           return 1;
         }
-        return 0;
+        // return 0;
     //   }
-    //   if (this.state.sort === "last") {
-    //     let x = a.name.last;
-    //     let y = b.name.last;
-    //     if (x < y) {
-    //       return -1;
-    //     }
-    //     if (x > y) {
-    //       return 1;
-    //     }
-    //     return 0;
+    //   if (this.state.sort) {
+        // let x = a.name.last;
+        // let y = b.name.last;
+        // if (x < y) {
+        //   return -1;
+        // }
+        // if (x > y) {
+        //   return 1;
+        // }
+        // return 0;
     //   }
-    //   return 0;
+      return 0;
     });
     this.setState({ users: usersList });
 
   };
 
-  // handlesort funtion look at article
+  // sorts users by searched name
   handleFormSubmit = (event) => {
     event.preventDefault();
     const filteredUsers = this.results.filter((user) =>
@@ -75,12 +76,13 @@ class Data extends Component {
   };
 
   setSort = (e) => {
-    this.setState({ sort: e.target.value },
+    this.setState({ sort: e },
         () => {
             this.handleSort();
         });
   };
 
+//   calls users to page
   componentDidMount() {
     API.getAPI().then((users) => {
       this.results = users.data.results;
@@ -96,7 +98,9 @@ class Data extends Component {
           handleFormSubmit={this.handleFormSubmit}
           handleSort={this.setSort}
         />
-        <Results users={this.state.users} />
+        <Results 
+          users={this.state.users} 
+        />
       </div>
     );
   }

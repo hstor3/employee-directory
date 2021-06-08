@@ -1,9 +1,10 @@
 import React from 'react';
+import "./index.css";
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 
 function employeeSearch(props) {
     return (
-        <Navbar bg="light" expand="lg">
+        <Navbar className='nav' bg="light" expand="lg">
             {/* <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand> */}
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
@@ -31,22 +32,24 @@ function employeeSearch(props) {
                         </button>
                     </div>
                 </form>
-                <label>Sort On</label>
+                {/* <label>Sort by first name</label>
                 <input type="radio" name="sort" value="first" onClick={props.handleSort} />
                 <label>Sort Off</label>
-                <input type="radio" name="sort" value="last" onClick={props.handleSort} />
-                {/* <Nav className="mr-auto">
+                <input type="radio" name="sort" value="last" onClick={props.handleSort} /> */}
+                <Nav className="mr-auto" activeKey='firstName'>
                         <NavDropdown title="Sort By" id="basic-nav-dropdown">
-                            <NavDropdown.Item onClick={props.handleSort('name.first')}>First Name</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.12">Last Name</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">DOB</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Phone Number</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                            <NavDropdown.Item  onSelect={props.handleSort} eventKey='firstName'>First Name</NavDropdown.Item>
+                            {/* <NavDropdown.Item href="#action/3.12">Last Name</NavDropdown.Item> */}
+                            {/* <NavDropdown.Item href="#action/3.2">DOB</NavDropdown.Item> */}
+                            {/* <NavDropdown.Item href="#action/3.3">Phone Number</NavDropdown.Item> */}
+                            {/* <NavDropdown.Divider /> */}
+                            {/* <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item> */}
                         </NavDropdown>
-                </Nav> */}
+                </Nav> 
             </Navbar.Collapse>
          </Navbar>
+
+         
     );
 }
 
