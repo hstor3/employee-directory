@@ -5,7 +5,6 @@ import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 function employeeSearch(props) {
     return (
         <Navbar className='nav' bg="light" expand="lg">
-            {/* <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand> */}
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
 
@@ -22,11 +21,6 @@ function employeeSearch(props) {
                         placeholder="Search for an employee"
                         id='employee'
                         />
-                        {/* <datalist id='employees'>
-                            {props.employees.map(employee => (
-                                <option value={employee} key={employee} />
-                            ))}
-                        </datalist> */}
                         <button type='submit' onClick={props.handleFormSubmit} className='btn btn-success'>
                             Search
                         </button>
@@ -37,13 +31,11 @@ function employeeSearch(props) {
                 <label>Sort Off</label>
                 <input type="radio" name="sort" value="last" onClick={props.handleSort} /> */}
                 <Nav className="mr-auto" activeKey='firstName'>
-                        <NavDropdown title="Sort By" id="basic-nav-dropdown">
+                        <NavDropdown className='dropdown-title' title="Sort By" id="basic-nav-dropdown">
                             <NavDropdown.Item  onSelect={props.handleSort} eventKey='firstName'>First Name</NavDropdown.Item>
                             {/* <NavDropdown.Item href="#action/3.12">Last Name</NavDropdown.Item> */}
                             {/* <NavDropdown.Item href="#action/3.2">DOB</NavDropdown.Item> */}
                             {/* <NavDropdown.Item href="#action/3.3">Phone Number</NavDropdown.Item> */}
-                            {/* <NavDropdown.Divider /> */}
-                            {/* <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item> */}
                         </NavDropdown>
                 </Nav> 
             </Navbar.Collapse>

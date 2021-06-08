@@ -19,9 +19,13 @@ function searchResults(props) {
                     <td>
                         <img alt='employee' src={result.picture.medium} className='employee-img' />
                         <div className='employee-name' src={result.name.first}>{result.name.first} {result.name.last}</div>
-                        <div src={result.email}>{result.email}</div>
                         <div>{moment(result.dob.date).format('MMMM Do, YYYY')}</div>
-                        <div>{result.cell}</div>
+                        <div src={result.email}>
+                            <a href={'mailto:' + result.email}>{result.email}</a>
+                        </div>
+                        <div>
+                            <a href={'tel:' + result.cell}>{result.cell}</a>
+                        </div>
                     </td>
                 </tr>
             ))}
