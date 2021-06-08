@@ -6,13 +6,6 @@ function searchResults(props) {
     console.log(props.headers)
     return (
         <table className="list-group search-results">
-          <thead>
-            {/* <tr>
-                    {props.headers.map(header => (
-                    <th key={header.name}>{header.name}</th>
-                    ))}
-            </tr> */}
-          </thead>
           <tbody>
             {props.users.map(result => (
                 <tr key={result.email} className="list-group-item">

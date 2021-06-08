@@ -12,15 +12,6 @@ class Data extends Component {
 
   results = [];
 
-  // headers = [
-  //     {name: 'image', width: '10px'},
-  //     {name: 'name', width: '20px'},
-  //     {name: 'email', width: '20px'},
-  //     {name: 'birthday', width: '20px'},
-  //     {name: 'phone', width: '20px'}
-  //     // {birthday phone}
-  // ]
-
 //   sorts users first name alphabetically
   handleSort() {
     if (!this.state.sort) {
@@ -29,7 +20,6 @@ class Data extends Component {
 
     let usersList = this.state.users;
     usersList.sort(function (a, b) {
-    //   if (this.state.sort === "first") {
         let x = a.name.first;
         let y = b.name.first;
         if (x < y) {

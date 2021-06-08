@@ -2,6 +2,7 @@ import React from 'react';
 import "./index.css";
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 
+// navbar and search input
 function employeeSearch(props) {
     return (
         <Navbar className='nav' bg="light" expand="lg">

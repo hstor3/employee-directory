@@ -18,6 +18,10 @@ Looking for a new way to look up employees? Look no further! With this app, you 
 ![https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 
+### Future Development
+
+In the future, I would like to add the option to sort an employee by last name and date of birth. I'd also like to spend more time styling the page. 
+
 ## Installation
 
 1. Clone the reop
